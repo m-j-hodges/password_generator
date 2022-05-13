@@ -28,7 +28,10 @@ function generatePass() {
   var passletters = "";
   if (lowercase == true) {
     passletters += lowerletters;
-  } else { var passletters = upperletters;}
+  } else {};
+  if (uppercase == true) {
+    passletters += upperletters
+  };
   if (numeric == true) {
     passletters += numbers;
   } else {};
@@ -48,16 +51,5 @@ document.getElementById("password").innerHTML = pass;
 
 };
 
-  console.log(passlength);
-  console.log(lowercase);
-  console.log(uppercase);
-  console.log(numeric);
-  console.log(special);
-
-  document.getElementById("generate").onclick() = generatePass()
-
-
-
- 
 
 
