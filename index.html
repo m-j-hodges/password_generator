@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn" onclick="generatePass()">Generate Password</button>
+          <div id="tooltip">
+            <form>
+            <p>Choose the criteria for your password:</p>
+            <ul>
+            <li><label for="charlength">8-128 characters<input type="input" id="charlength" name="length" placeholder= "number" value="8"></label></li>
+            </ul>
+            <p> Choose which characters to include.</p>
+            <ul>
+            <li><label for="lowercase">Click to include Lowercase.<input type="checkbox" id="lowercase" name="lowercase" value=""/>
+            </label>
+            </li>
+            <li><label for="uppercase">Click to include Uppercase.<input type="checkbox" id="uppercase" name="uppercase" value=""/></label></li>
+            <li><label for="numeric"> Click for a numeric password.<input type="checkbox" id="numeric" name="numeric" value=""/></label></li>
+            <li><label for="specialchar">Click for password with special characters.<input type="checkbox" id="specialchar"/></label></li>
+            </ul>
+            </form>
+            <button id="generatepass" class="btn">Generate final password</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
